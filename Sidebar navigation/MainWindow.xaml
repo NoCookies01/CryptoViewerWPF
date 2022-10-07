@@ -1,0 +1,105 @@
+﻿<Window x:Class="Sidebar_navigation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sidebar_navigation"
+        mc:Ignorable="d"
+        Title="CryptoViewer" Height="450" Width="800" WindowStyle="None" AllowsTransparency ="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Transparent">
+    
+    
+
+    <Grid Background="#202124">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        
+
+        <!--// Home Button //-->
+        <Border Margin="10 10 5 10" CornerRadius="10">
+
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF411384" Offset="1"/>
+                    <GradientStop Color="#FF4D2981" Offset="0.545"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Button Grid.Column="0" Grid.Row="0" x:Name="homebutton"  FontSize="13" Foreground="LightGray" Click="homebutton_Click" BorderThickness="0" Background="Transparent" BorderBrush="#FF707070" HorizontalAlignment="Center" VerticalAlignment="Center">
+                 <StackPanel>
+                    <Image Source="image/home.png" Height="20" />
+                </StackPanel>
+            </Button>
+
+        </Border>
+
+        <!--// Top Panel //-->
+
+        <Border Grid.Column="1" Grid.ColumnSpan="3" Background="#343538" Margin="5 10 10 10" CornerRadius="10">
+
+            
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+
+                </Grid.ColumnDefinitions>
+
+
+       
+
+                <!--// Convert Button //-->
+
+                <Rectangle Grid.Column="0" VerticalAlignment="Stretch" Width="1" Height="32" Margin="78 0 0 0" Stroke="#4a4a4a" />
+
+                <Button Grid.Column="0" x:Name="converterbutton" Content="Convert" FontSize="13" Foreground="LightGray" BorderThickness="0" Click="converterbutton_Click" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                
+
+                <!--// Exit Button //-->
+
+                <Rectangle Grid.Column="5" VerticalAlignment="Stretch" Width="1" Height="32" Margin="0 0 58 0" Stroke="#4a4a4a" />
+
+                <Button Grid.Column="5" x:Name="exitbutton" Content="Exit" FontSize="13" Foreground="LightGray" BorderThickness="0" Click="exitbutton_Click" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <!--// Info Button //-->
+
+                <Rectangle Grid.Column="4" VerticalAlignment="Stretch" Width="1" Height="32" Margin="0 0 58 0" Stroke="#4a4a4a" />
+
+                <Button Grid.Column="4" x:Name="infobutton" Content="Info" FontSize="13" Foreground="LightGray" BorderThickness="0" Click="infobutton_Click" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+
+            </Grid>
+
+
+
+
+        </Border>
+        
+        <Border Grid.Column="1" Grid.Row="1" >
+            
+            <Frame x:Name="toppanframe" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden" />
+        </Border>
+
+    </Grid>
+</Window>

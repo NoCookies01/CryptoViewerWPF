@@ -1,0 +1,26 @@
+﻿<Page x:Class="Sidebar_navigation.Pages.InfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sidebar_navigation.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="InfoPage">
+
+    <Grid Background="#202124">
+        <Grid.RowDefinitions>
+
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="1" Margin="25">
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="35" Text="Created and designed by" Foreground="LightGray" FontWeight="DemiBold" />
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25" Text="Demian Zvarych" Foreground="LightGray" FontWeight="ExtraLight"/>
+
+            </StackPanel>
+    </Grid>
+</Page>

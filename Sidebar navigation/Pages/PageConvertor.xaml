@@ -1,0 +1,120 @@
+﻿<Page x:Class="Sidebar_navigation.Pages.PageConvertor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sidebar_navigation.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageConvertor">
+
+    <Grid Background="#202124">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="225"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <!--// Label Converter //-->
+
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Background="#343538" CornerRadius="10" Margin="5" >
+
+            <Label Content="Converter" Foreground="LightGray"  FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+
+        </Border>
+
+        <!--// Enter Ammount Label //-->
+
+        <Label Grid.Row="1" Grid.Column="1" Content="Enter your ammount: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Foreground="DarkGray" FontWeight="DemiBold"/>
+
+        <Border Grid.Row="1" Grid.Column="2" Background="#343538" CornerRadius="10" Margin="5">
+
+            <StackPanel VerticalAlignment="Center" Margin="5">
+
+                <TextBox x:Name="Text_box_ammount" Background="Transparent" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="180" FontSize="20" CaretBrush="LightGray" SelectionBrush="LightGray" BorderThickness="0" Foreground="LightGray"/>
+
+            </StackPanel>
+        </Border>
+
+        <!--// ComboBox Convert From //-->
+
+        <Border Grid.Row="2" Grid.Column="1" Background="#343538" CornerRadius="10" Margin="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" >
+
+                <Label Content="Convert From" Foreground="DarkGray" FontSize="15" FontWeight="DemiBold" />
+                <ComboBox x:Name="fromcom" Background="#3d3e42" Width="150" IsSynchronizedWithCurrentItem="True" BorderThickness="0"
+                          Foreground="Black"
+                          BorderBrush="Black"
+                          
+                          />
+
+            </StackPanel>
+        </Border>
+
+        <!--// ComboBox Convert To //-->
+
+        <Border Grid.Row="2" Grid.Column="2" Background="#343538" CornerRadius="10" Margin="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" >
+
+                <Label Content="Convert To" Foreground="DarkGray" FontSize="15" FontWeight="DemiBold"/>
+                <ComboBox x:Name="tocom" Background="#3d3e42" Width="150" IsSynchronizedWithCurrentItem="True" BorderThickness="0"
+                          Foreground="Black"
+                          BorderBrush="Black"
+                          
+                          />
+
+
+            </StackPanel>
+        </Border>
+
+        <!--// Button Convert //-->
+
+        <Border Grid.Row="3" Grid.Column="1" CornerRadius="10" Margin="100 5 5 5">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF411384" Offset="1"/>
+                    <GradientStop Color="#FF4D2981" Offset="0.545"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" >
+
+                <Button Content="Convert" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" Click="Button_Click" Foreground="LightGray" FontSize="15" FontWeight="DemiBold" Cursor="Hand"/>
+
+            </StackPanel>
+        </Border>
+
+        <!--// Your Ammount is Label //-->
+
+        <Border Grid.Row="3" Grid.Column="2" Background="#343538" CornerRadius="10" Margin="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" >
+
+                <Label x:Name="resultCur" Foreground="DarkGray" Content="Your ammount is" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="15" FontWeight="DemiBold"/>
+
+            </StackPanel>
+        </Border>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>
